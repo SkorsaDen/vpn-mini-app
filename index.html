@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stargate VPN</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключите Telegram Web Apps API -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stargate VPN</h1>
+        <div id="status">
+            <p>🔑 Ключ: <span id="key">Нет активного ключа</span></p>
+            <p>📅 Подписка: <span id="subscription">Не активна</span></p>
+            <p>💰 Баланс: <span id="balance">0 руб</span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="sendCommand('get_key')">🔑 Получить ключ</button>
+            <button onclick="sendCommand('topup')">💰 Пополнить баланс</button>
+            <button onclick="sendCommand('profile')">👤 Профиль</button>
+            <button onclick="sendCommand('support')">📞 Поддержка</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
